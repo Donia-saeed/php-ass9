@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
 
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-    $accounts = file_get_contents('data.json'); // get data from file convert it to array
+    $accounts = file_get_contents('storage/data.json'); // get data from file convert it to array
     $accounts = json_decode($accounts, true);
     $flag = 0;
     foreach ($accounts as $account) {

@@ -9,11 +9,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $_POST['password'] = $hashedPassword;//replace
     $_POST['comPassword'] = $comHashedPassword;//replace
 
-    $data = file_get_contents('data.json'); // get data from file convert it to array
+    $data = file_get_contents('storage/data.json'); // get data from file convert it to array
     $data = json_decode($data, true);
     $data[] = $_POST; // push new $_POST into old $data[] array
     $data = json_encode($data, JSON_PRETTY_PRINT); //store data in encoding
-    file_put_contents('data.json', $data);
+    file_put_contents('storage/data.json', $data);
 }
 
 header('Location: login.html');
