@@ -1,0 +1,26 @@
+[
+    {
+        "username": "hala1",
+        "email": "h@gmail.com",
+        "password": "$2y$10$wICGy.8DFI9XGodDbA7k1e5ssZpWem8HDW7sUzJNLa59rFsTE\/oXS",
+        "comPassword": "123"
+    },
+    {
+        "username": "ali mahmoud",
+        "email": "ma@gmail.com",
+        "password": "$2y$10$GEvl6VSWLGZeylWLGoEnmuxySF64YQkY\/mcehLEk0aDQlhkt6Z.bq",
+        "comPassword": "$2y$10$xx2h22fUDikEXlH.eljdwO1QMjt5tHHa4j5vMJD8hP4ZOOOVeWeu."
+    },
+    {
+        "username": "doniasaeed",
+        "email": "doniasaeed565@gmail.com",
+        "password": "$2y$10$TXrPneHFOf3UyDvxqdDsPe.ffdI4JMQ4nVG5\/wMdIQHj3l\/WhL6ma",
+        "comPassword": "$2y$10$hnMJQBIothRfgWRhazKCdui1E8poiS26ilTS9VzdaZBEft.Vx0Dtq"
+    },
+    {
+        "username": "newuser",
+        "email": "newuser@gmail.com",
+        "password": "$2y$10$eX7bKdw6.QTldum2q3Eks.Mu.vAWtjH74crv0jjVOKr6v1959JNeq",
+        "comPassword": "$2y$10$uhDO1sl8r4yMxQNtwHlDJuTACXq7SRRx.YIQtKQgBemZs4Zm3c9DK"
+    }
+]
