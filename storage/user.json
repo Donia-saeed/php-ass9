@@ -22,5 +22,23 @@
         "email": "newuser@gmail.com",
         "password": "$2y$10$eX7bKdw6.QTldum2q3Eks.Mu.vAWtjH74crv0jjVOKr6v1959JNeq",
         "comPassword": "$2y$10$uhDO1sl8r4yMxQNtwHlDJuTACXq7SRRx.YIQtKQgBemZs4Zm3c9DK"
+    },
+    {
+        "username": "last",
+        "email": "last@g.com",
+        "password": "$2y$10$pP91sr2HDz661AkCRdesButpOUwiQhBS1YauXYWn4N45ddBYNYAby",
+        "comPassword": "$2y$10$I.x8kNUDdH4bCRVqm1du0uYnNEu.oAvgrxDIMnq3mCgshLwn3BW7S"
+    },
+    {
+        "username": "ali",
+        "email": "ali@gmail.com",
+        "password": "$2y$10$GGcjhLypEOY9vHKxFOYmy.wZKTSWcMowANPB6FHQzZ5fFcQ5g512q",
+        "comPassword": "$2y$10$cgAm7wvVhiS7vvm\/FeExaOBFVILsZmu4jDNT67G97itfU8ywld.cy"
+    },
+    {
+        "username": "ali",
+        "email": "ali@gmail.com",
+        "password": "$2y$10$9ud8hHbxawd7ORVMkp.9.ecwhW3FKE2sdG7Dgdvw1r5d9KdcGaMqe",
+        "comPassword": "$2y$10$e5QghGOZf\/cPvG7f8.25nODFh0Q3MkmKR7XwSE0kJzi1c\/1Mnj1Si"
     }
 ]

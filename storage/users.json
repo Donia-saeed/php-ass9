@@ -1,0 +1,56 @@
+[
+    {
+        "username": "hala1",
+        "email": "h@gmail.com",
+        "password": "$2y$10$wICGy.8DFI9XGodDbA7k1e5ssZpWem8HDW7sUzJNLa59rFsTE\/oXS",
+        "comPassword": "123"
+    },
+    {
+        "username": "ali mahmoud",
+        "email": "ma@gmail.com",
+        "password": "$2y$10$GEvl6VSWLGZeylWLGoEnmuxySF64YQkY\/mcehLEk0aDQlhkt6Z.bq",
+        "comPassword": "$2y$10$xx2h22fUDikEXlH.eljdwO1QMjt5tHHa4j5vMJD8hP4ZOOOVeWeu."
+    },
+    {
+        "username": "doniasaeed",
+        "email": "doniasaeed565@gmail.com",
+        "password": "$2y$10$TXrPneHFOf3UyDvxqdDsPe.ffdI4JMQ4nVG5\/wMdIQHj3l\/WhL6ma",
+        "comPassword": "$2y$10$hnMJQBIothRfgWRhazKCdui1E8poiS26ilTS9VzdaZBEft.Vx0Dtq"
+    },
+    {
+        "username": "newuser",
+        "email": "newuser@gmail.com",
+        "password": "$2y$10$eX7bKdw6.QTldum2q3Eks.Mu.vAWtjH74crv0jjVOKr6v1959JNeq",
+        "comPassword": "$2y$10$uhDO1sl8r4yMxQNtwHlDJuTACXq7SRRx.YIQtKQgBemZs4Zm3c9DK"
+    },
+    {
+        "username": "last",
+        "email": "last@g.com",
+        "password": "$2y$10$pP91sr2HDz661AkCRdesButpOUwiQhBS1YauXYWn4N45ddBYNYAby",
+        "comPassword": "$2y$10$I.x8kNUDdH4bCRVqm1du0uYnNEu.oAvgrxDIMnq3mCgshLwn3BW7S"
+    },
+    {
+        "username": "ali",
+        "email": "ali@gmail.com",
+        "password": "$2y$10$GGcjhLypEOY9vHKxFOYmy.wZKTSWcMowANPB6FHQzZ5fFcQ5g512q",
+        "comPassword": "$2y$10$cgAm7wvVhiS7vvm\/FeExaOBFVILsZmu4jDNT67G97itfU8ywld.cy"
+    },
+    {
+        "username": "ali",
+        "email": "ali@gmail.com",
+        "password": "$2y$10$9ud8hHbxawd7ORVMkp.9.ecwhW3FKE2sdG7Dgdvw1r5d9KdcGaMqe",
+        "comPassword": "$2y$10$e5QghGOZf\/cPvG7f8.25nODFh0Q3MkmKR7XwSE0kJzi1c\/1Mnj1Si"
+    },
+    {
+        "username": "last2",
+        "email": "last@g.com",
+        "password": "$2y$10$Bj5fBqgWPepObOvyS2uajuSS763ZrC3tvlAH03arT.YETfNvO.GRK",
+        "comPassword": "$2y$10$q5kNoOHMeNnMfap17Lnyme2FUGZPEm2It7k52m.YNX5hDS.2uZG.i"
+    },
+    {
+        "username": "last3",
+        "email": "last@g.com",
+        "password": "$2y$10$5l8pINxygXvOYLfJjaQh2uiPACCdPpHez2zudczDfUFKda5SxMfJa",
+        "comPassword": "$2y$10$BnwQbR\/X5F0ifSDSZH.Vt.BT0OmB9ofsrHosXx1YiwFJBcq5h0vf."
+    }
+]
