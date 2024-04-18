@@ -1,22 +1,33 @@
 <?php
 session_start();
 
-// function userExists($username)
-// {
-//     $data = getAllUserData();
-//     foreach ($data as $row) {
-//         if ($row['username'] == $username) {
-//             return true;
-//         }
-//     }
-//     return false;
-// }
-// if (userExists($username)) {
-//     header('Location: index.php');
-//     exit(); 
-// }
-
-
+function updateUserProfile($username)
+{
+    // validation on username
+    $data = getAllUserData();
+    foreach ($data as $key => $row) {
+        if ($row['username'] === $_SESSION['username']) {
+            $data[$key]['username'] = $username;
+            $_SESSION['username'] = $username;
+            break;
+        }
+    }
+    putAllUserData($data);
+    return true;
+}
+function deleteUserProfile()
+{
+    $data = getAllUserData();
+    foreach ($data as $key => $row) {
+        if ($row['username'] === $_SESSION['username']) {
+            unset($data[$key]);
+            break;
+        }
+    }
+    putAllUserData($data);
+    logoutUser();
+    return true;
+}
 function getUserData($username, $password)
 {
     $accounts = getAllUserData();
@@ -41,4 +52,22 @@ function putAllUserData($data)
     file_put_contents('storage/users.json', $data);
 }
 
+
+
+
+// function userExists($username)
+// {
+//     $data = getAllUserData();
+//     foreach ($data as $row) {
+//         if ($row['username'] == $username) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+
+// if (userExists($username)) {
+//     header('Location: index.php');
+//     exit(); 
+// }
 ?>

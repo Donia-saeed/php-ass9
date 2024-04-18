@@ -14,6 +14,7 @@
 
 </head>
 
+
 <body>
     <section class="ftco-section">
         <div class="container">
@@ -26,6 +27,7 @@
                         </div>
                         <h3 class="text-center mb-4">your profile</h3>
                     </div>
+            
                 </div>
             </div>
 
@@ -52,3 +54,4 @@
 </body>
 
 </html>
+
