@@ -50,7 +50,7 @@
                                     </label>
                                 </div>
                                 <div class="w-50 text-md-right">
-                                    <a href="register.html" class="btn btn-primary rounded p-1">New-One</a>
+                                    <a href="register.php" class="btn btn-primary rounded p-1">New-One</a>
 
                                 </div>
                             </div>
