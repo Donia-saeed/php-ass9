@@ -2,11 +2,12 @@
 require 'userController.php';
 // check if user is already logged in
 if (isset($_SESSION['username'])) {
-    header('location: index.php');//after login
+    header('location: login.php');//after login
 }
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
     $password = $_POST['password'];
     $comPassword = $_POST['comPassword'];
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);

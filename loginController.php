@@ -16,12 +16,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
     if ($userexist) {
-        header('Location: index.php');
+        header('Location: product.php');
         exit(); 
     } else {
          
      $error = 'Invalid username or password';
-      include 'login.php';
+     header('Location: login.php');   
        
     }
 }

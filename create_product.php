@@ -4,18 +4,18 @@ require 'userController.php';
 $products = file_get_contents('storage/product.json'); // get data from file convert it to array
 $products = json_decode($products, true);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $id = count($products)+1;
+    $id = count($products) + 1;
 
     $newProduct = [
         'id' => $id,
         'name' => $_POST['name'],
         'price' => $_POST['price'],
-'quantity'=> $_POST['quantity']
+        'quantity' => $_POST['quantity'],
         // Add other product details as needed
     ];
     $products = file_get_contents('storage/product.json'); // get data from file convert it to array
     $products = json_decode($products, true);
-    $products[] = $newProduct; // push new $_POST 
+    $products[] = $newProduct; // push new $_POST
     $products = json_encode($products, JSON_PRETTY_PRINT); //store products in encoding
     file_put_contents('storage/product.json', $products);
     header('Location: product.php');
@@ -53,8 +53,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <form action="create_product.php" method="post">
             <div class="form-group">
                 <label for="id">id:</label>
-                <input type="number" class="form-control" id="id" name="id" 
-                value="<?php echo $id = count($products)+1; ?>" readonly>
+                <input type="number" class="form-control" id="id" name="id" value="<?php echo $id = count($products) + 1; ?>"
+                    readonly>
             </div>
             <div class="form-group">
                 <label for="name">Name:</label>

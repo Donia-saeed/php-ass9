@@ -1,9 +1,30 @@
+<?php
+require 'userController.php';
 
+$username = $_SESSION['username'];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $confirmedPassword = $_POST['comPassword'];
+
+    if ($password !== $confirmedPassword) {
+        header('Location: edit_profile.php');
+        exit();
+    }
+
+    updateUserProfile($username, $password);
+
+    header('Location: profile.php');
+    exit();
+}
+
+?>
 <!doctype html>
 <html lang="en">
 
 <head>
-    <title>Login</title>
+    <title>Update-Profile</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -20,7 +41,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-5">
-                    <h2 class="heading-section">LOGIN </h2>
+                    <h2 class="heading-section">Update Your Profile</h2>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -29,36 +50,28 @@
                         <div class="icon d-flex align-items-center justify-content-center">
                             <span class="fa fa-user-o"></span>
                         </div>
-                        <h3 class="text-center mb-4">Have an account?</h3>
-                        <form action="loginController.php" class="login-form" method="post">
+                        <h3 class="text-center mb-4">Update Your Profile</h3>
+                        <form action="edit_profile.php" class="login-form" method="post">
                             <div class="form-group">
+                                <label for="username">Username:</label>
                                 <input type="text" class="form-control rounded-left" placeholder="Username"
-                                    name="username" required>
+                                    name="username" value="<?php echo $username; ?>" required>
                             </div>
-                            <div class="form-group d-flex">
-                                <input type="password" class="form-control rounded-left" name="password"
-                                    placeholder="Password" required> 
-                                    
-                            </div>
-                           
-                            <div class="form-group d-md-flex">
-                                <div class="w-50">
-                                    <!-- <p class="error"><?php echo $error; ?></p> -->
-                                    <label class="checkbox-wrap checkbox-primary">Remember Me
-                                        <input type="checkbox" checked>
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <div class="w-50 text-md-right">
-                                    <a href="register.html" class="btn btn-primary rounded p-1">New-One</a>
 
-                                </div>
+                            <div class="form-group ">
+                                <label for="password">password:</label>
+                                <input type="password" class="form-control rounded-left" placeholder="Password"
+                                    name="password" value="<?php echo $password; ?>"required>
+                            </div>
+                            <div class="form-group ">
+                                <label for="comPassword">confirmed Password:</label>
+                                <input type="password" class="form-control rounded-left"
+                                    placeholder=" confirmed Password" name="comPassword"
+                                    value="<?php echo $comPassword; ?>"required>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary rounded submit p-3 px-5 ">Get
+                                <button type="submit" class="btn btn-primary rounded submit p-3 px-5">Get
                                     Started</button>
-
-
                             </div>
                         </form>
                     </div>

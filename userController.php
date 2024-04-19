@@ -1,47 +1,52 @@
 <?php
 session_start();
 
-function updateUserProfile($username)
+function updateUserProfile($username, $password)
 {
-    // validation on username
+    $username = trim($username);
+    $password = trim($password);
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     $data = getAllUserData();
+
+    // Loop through user data to find the user's record by username
     foreach ($data as $key => $row) {
         if ($row['username'] === $_SESSION['username']) {
             $data[$key]['username'] = $username;
+            $data[$key]['password'] = $hashedPassword;
             $_SESSION['username'] = $username;
-            break;
+            if (putAllUserData($data)) {
+                // Data saved successfully
+                return true;
+            } else {
+                // Failed to save data
+                return false;
+            }
         }
     }
-    putAllUserData($data);
-    return true;
+    return false;
 }
-function deleteUserProfile()
-{
-    $data = getAllUserData();
-    foreach ($data as $key => $row) {
-        if ($row['username'] === $_SESSION['username']) {
-            unset($data[$key]);
-            break;
-        }
-    }
-    putAllUserData($data);
-    logoutUser();
-    return true;
-}
+
 function getUserData($username, $password)
 {
     $accounts = getAllUserData();
-    foreach ( $accounts as $row) {
-        if ($row['username'] === $username ) {
+    foreach ($accounts as $row) {
+        if ($row['username'] === $username) {
             return $row;
         }
     }
-    
 }
 
+function logoutUser()
+{
+    // logout current user
+    session_destroy();
+    header('location: login.php');
+    exit();
+}
 
 function getAllUserData()
-{ $data = file_get_contents('storage/users.json');
+{
+    $data = file_get_contents('storage/users.json');
     $data = json_decode($data, true);
     return $data;
 }
@@ -51,23 +56,4 @@ function putAllUserData($data)
     $data = json_encode($data, JSON_PRETTY_PRINT);
     file_put_contents('storage/users.json', $data);
 }
-
-
-
-
-// function userExists($username)
-// {
-//     $data = getAllUserData();
-//     foreach ($data as $row) {
-//         if ($row['username'] == $username) {
-//             return true;
-//         }
-//     }
-//     return false;
-// }
-
-// if (userExists($username)) {
-//     header('Location: index.php');
-//     exit(); 
-// }
 ?>
